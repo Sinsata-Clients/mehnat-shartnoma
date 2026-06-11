@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirish — Mehnat Shartnomasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-box">
+
+      <div class="login-logo">
+        <div class="logo-icon">🎓</div>
+        <h1>Mehnat Shartnomasi</h1>
+        <p class="subtitle">Universitet xodimlari mehnat shartnomasini avtomatlashtiruvchi axborot tizimini ishlab chiqish tizimi</p>
+      </div>
+
+      <div class="form-group">
+        <label>Email manzil</label>
+        <div class="input-icon-wrap">
+          <span class="input-icon">✉️</span>
+          <input type="email" id="email" placeholder="email@tuit.uz">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Parol</label>
+        <div class="input-icon-wrap">
+          <span class="input-icon">🔒</span>
+          <input type="password" id="password" placeholder="••••••••">
+        </div>
+      </div>
+
+      <button id="loginBtn" class="btn-primary">Tizimga kirish</button>
+      <p id="errorMsg" class="error-text"></p>
+
+      <p class="login-footer">
+        Faqat vakolatli xodimlar uchun
+      </p>
+    </div>
+  </div>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

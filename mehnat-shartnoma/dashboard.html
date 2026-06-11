@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Mehnat Shartnomasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <span class="topbar-logo">🎓</span>
+      <h2>Mehnat Shartnomalari</h2>
+    </div>
+    <div class="topbar-right">
+      <div class="user-info">
+        <span class="user-avatar">👤</span>
+        <span id="userEmail"></span>
+      </div>
+      <button class="btn-settings" onclick="window.location.href='settings.html'">⚙️ Sozlamalar</button>
+      <button class="btn-logout" id="logoutBtn">Chiqish</button>
+    </div>
+  </div>
+
+  <div id="settingsWarning" class="settings-warning" style="display:none;">
+    ⚠️ Tashkilot ma'lumotlari to'liq kiritilmagan — PDF export ishlamaydi.
+    To'ldirilmagan maydonlar: <strong id="missingFields"></strong>
+    <a href="settings.html" class="warning-link">Sozlamalarga o'tish →</a>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-card">
+      <span class="stat-number" id="totalCount">0</span>
+      <span class="stat-label">Jami shartnomalar</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number green" id="activeCount">0</span>
+      <span class="stat-label">Faol shartnomalar</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number red" id="expiredCount">0</span>
+      <span class="stat-label">Muddati tugagan</span>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="page-header">
+      <h3>Xodimlar shartnomalari</h3>
+      <button class="btn-add" onclick="window.location.href='contract.html'">+ Yangi shartnoma</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Xodim ismi yoki lavozimi bo'yicha qidirish...">
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Xodim F.I.O</th>
+            <th>Lavozim</th>
+            <th>Bo'lim</th>
+            <th>Boshlanish</th>
+            <th>Tugash</th>
+            <th>Holat</th>
+            <th>Amallar</th>
+          </tr>
+        </thead>
+        <tbody id="contractsTable">
+          <tr>
+            <td colspan="8" style="text-align:center; color:#9ca3af; padding:32px;">
+              Shartnomalar yuklanmoqda...
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous"></script>
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="contracts.js"></script>
+</body>
+</html>

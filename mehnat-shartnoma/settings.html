@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sozlamalar — Mehnat Shartnomasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <span class="topbar-logo">🎓</span>
+      <h2>Mehnat Shartnomalari</h2>
+    </div>
+    <div class="topbar-right">
+      <button class="btn-logout" id="logoutBtn">Chiqish</button>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="breadcrumb">
+      <span onclick="window.location.href='dashboard.html'">Dashboard</span>
+      <span> › </span>
+      <span>Tashkilot sozlamalari</span>
+    </div>
+
+    <div class="form-card">
+      <h3>Tashkilot ma'lumotlari</h3>
+      <p class="form-subtitle">Bu ma'lumotlar PDF shartnomada "Ish beruvchi" sifatida chiqariladi</p>
+
+      <div class="form-section-title">🏛️ Tashkilot rekvizitlari</div>
+
+      <div class="form-group">
+        <label>Universitet nomi <span class="required">*</span></label>
+        <input type="text" id="orgName" placeholder="Toshkent axborot texnologiyalari universiteti">
+      </div>
+
+      <div class="form-group">
+        <label>Manzil <span class="required">*</span></label>
+        <input type="text" id="orgAddress" placeholder="Amir Temur shoh ko'chasi, 108, Toshkent">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>STIR <span class="required">*</span></label>
+          <input type="number" id="orgStir" placeholder="123456789">
+        </div>
+        <div class="form-group">
+          <label>Hisob raqam (H/r) <span class="required">*</span></label>
+          <input type="number" id="orgHr" placeholder="20208000000000000000">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Bank nomi <span class="required">*</span></label>
+        <input type="text" id="orgBank" placeholder="O'zbekiston Milliy Banki">
+      </div>
+
+      <div class="form-actions">
+        <button class="btn-secondary" onclick="window.location.href='dashboard.html'">← Orqaga</button>
+        <button class="btn-save" id="saveSettingsBtn">💾 Saqlash</button>
+      </div>
+
+      <p id="settingsMsg" style="margin-top:12px; font-size:13px;"></p>
+    </div>
+  </div>
+
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="settings.js"></script>
+</body>
+</html>
